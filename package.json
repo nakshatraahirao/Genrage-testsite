@@ -1,0 +1,16 @@
+{
+  "name": "genrage-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix storefront\" \"npm run dev --prefix admin\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:storefront": "npm run dev --prefix storefront",
+    "dev:admin": "npm run dev --prefix admin",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix storefront && npm install --prefix admin",
+    "build": "npm run build --prefix backend && npm run build --prefix storefront && npm run build --prefix admin"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
